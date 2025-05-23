@@ -3,13 +3,14 @@ import { create } from "zustand";
 
 const useCalculatorStore = create<CalculatorState>((set) => ({
   currentValue: "",
-  input: "",
+  input: "21,131",
   error: "",
   overwrite: false,
   result: "",
   addDigit: (digit) => {
     set((state) => ({
       currentValue: state.overwrite ? digit : state.currentValue + digit,
+      input: state.overwrite ? digit : state.currentValue + digit,
       overwrite: false,
     }));
   },

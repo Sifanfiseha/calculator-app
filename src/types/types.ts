@@ -13,4 +13,8 @@ interface CalculatorState {
   resetError: () => void;
 }
 
-export type { CalculatorState };
+interface ButtonProps {
+  value: string;
+}
+
+export type { CalculatorState, ButtonProps };
