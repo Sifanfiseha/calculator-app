@@ -8,9 +8,9 @@ interface CalculatorState {
   addOprator: (oprator: "+" | "-" | "*" | "/") => void;
   clear: () => void;
   deleteLast: () => void;
-  evaluate: () => {};
+  evaluate: () => void;
   setError: (msg: string) => void;
-  restError: () => void;
+  resetError: () => void;
 }
 
 export type { CalculatorState };
