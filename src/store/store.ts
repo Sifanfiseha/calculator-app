@@ -1,28 +1,39 @@
 import type { CalculatorState } from "../types/types";
 import { create } from "zustand";
+import { evaluate } from "mathjs";
 
 const useCalculatorStore = create<CalculatorState>((set) => ({
   input: "",
   error: "",
   result: "",
   addDigit: (digit) => {
-    set((state) => ({
-      input: state.input + digit,
-      overwrite: false,
-      result: "",
-    }));
+    set((state) => {
+      if (state.input === "0" && digit === "0") return state;
+      if (state.input === "" && digit === "0") return state;
+
+      const newValue = state.input + digit;
+
+      return {
+        input: newValue,
+      };
+    });
   },
+
   addOprator: (oprator) => {
     set((state) => {
       const lastChar = state.input.slice(-1);
+      const lastTwoChar = state.input.slice(-2);
       const isOprator = ["+", "-", "*", "/"].includes(lastChar);
+
+      if (oprator === "-" && lastTwoChar !== "-") {
+        return { input: state.input + "-" };
+      }
 
       if (state.input === "" || isOprator) {
         return state;
       }
       return {
         input: state.input + oprator,
-        currentValue: "",
       };
     });
   },
@@ -45,7 +56,7 @@ const useCalculatorStore = create<CalculatorState>((set) => ({
         const fullExpression = state.input;
         let result;
         if (state.input.trim() !== "") {
-          result = eval(fullExpression);
+          result = evaluate(fullExpression);
         } else {
           result = "0";
         }

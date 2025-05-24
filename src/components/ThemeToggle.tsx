@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import { applyTheme } from "../utils/theme";
+import { applyTheme } from "../theme/theme";
 
 const ThemeToggle: React.FC = () => {
   const [index, setIndex] = useState(1);
