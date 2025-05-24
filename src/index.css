@@ -5,6 +5,10 @@ body {
   font-family: "League Spartan", sans-serif;
 }
 
+@custom-variant theme1 (&:where(.theme1, .theme1 *));
+@custom-variant theme2 (&:where(.theme2, .theme2 *));
+@custom-variant theme3 (&:where(.theme3, .theme3 *));
+
 @theme {
   /* Theme 1 */
 
@@ -38,39 +42,147 @@ body {
 
   --color-Very-dark-grayish-blue: hsl(221, 14%, 31%);
   --color-White: hsl(0, 0%, 100%);
+
+  /* Theme 2 */
+
+  /* Backgrounds */
+
+  /* (main background) */
+  --color-Light-gray: hsl(0, 0%, 90%);
+  /* (toggle background, keypad background) */
+  --color-Grayish-red: hsl(0, 5%, 81%);
+  /* (screen background) */
+  --color-Very-light-gray: hsl(0, 0%, 93%);
+
+  /* Keys */
+
+  /* (key background) */
+  --color-Dark-moderate-cyan: hsl(185, 42%, 37%);
+  /* (key shadow) */
+  --color-Very-dark-cyan: hsl(185, 58%, 25%);
+
+  /* (key background, toggle) */
+  --color-Orange: hsl(25, 98%, 40%);
+  /* (key shadow) */
+  --color-Dark-orange: hsl(25, 99%, 27%);
+
+  /* (key background) */
+  --color-Light-grayish-yellow: hsl(45, 7%, 89%);
+  /* (key shadow) */
+  --color-Dark-grayish-orange: hsl(35, 11%, 61%);
+
+  /* Text */
+
+  --color-Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+  --color-White: hsl(0, 0%, 100%);
+
+  /* Theme 3 */
+
+  /* Backgrounds */
+
+  /* (main background) */
+  --color-Very-dark-violet: hsl(268, 75%, 9%);
+  /* (toggle background, keypad background, screen background) */
+  --color-Very-dark-violet-2: hsl(268, 71%, 12%);
+
+  /* Keys */
+
+  /* (key background) */
+  --color-Dark-violet: hsl(281, 89%, 26%);
+  /* (key shadow) */
+  --color-Vivid-magenta: hsl(285, 91%, 52%);
+
+  /* (key background, toggle) */
+  --color-Pure-cyan: hsl(176, 100%, 44%);
+  /* (key shadow) */
+  --color-Soft-cyan: hsl(177, 92%, 70%);
+
+  /* (key background) */
+  --color-Very-dark-violet-key: hsl(268, 47%, 21%);
+  /* (key shadow) */
+  --color-Dark-magenta: hsl(290, 70%, 36%);
+
+  /* Text */
+
+  --color-Light-yellow: hsl(52, 100%, 62%);
+  --color-Very-dark-blue: hsl(198, 20%, 13%);
+  --color-White: hsl(0, 0%, 100%);
 }
 
 :root {
   /* Theme 1 */
 
   /* Backgrounds */
-
-  /* (main background) */
-  --Very-dark-desaturated-blue: hsl(222, 26%, 31%);
-  /* (toggle background, keypad background) */
-  --Very-dark-desaturated-blue: hsl(223, 31%, 20%);
-  /* (screen background) */
-  --Very-dark-desaturated-blue: hsl(224, 36%, 15%);
+  --bg-main: hsl(222, 26%, 31%); /* Main background */
+  --bg-toggle-keypad: hsl(223, 31%, 20%); /* Toggle & keypad background */
+  --bg-screen: hsl(224, 36%, 15%); /* Screen background */
 
   /* Keys */
+  /* Dark blue key */
+  --key-bg-blue: hsl(225, 21%, 49%); /* Key background */
+  --key-shadow-blue: hsl(224, 28%, 35%); /* Key shadow */
 
-  /* (key background) */
-  ---dark-blue-key: hsl(225, 21%, 49%);
-  /* (key shadow) */
-  --Desaturated-dark-blue: hsl(224, 28%, 35%);
+  /* Red key */
+  --key-bg-red: hsl(6, 63%, 50%); /* Key background (toggle) */
+  --key-shadow-red: hsl(6, 70%, 34%); /* Key shadow */
 
-  /* (key background, toggle) */
-  --Red: hsl(6, 63%, 50%);
-  /* (key shadow) */
-  --Dark-red: hsl(6, 70%, 34%);
-  /* (key background) */
-
-  --Light-grayish-orange: hsl(30, 25%, 89%);
-  /* (key shadow) */
-  --Grayish-orange: hsl(28, 16%, 65%);
+  /* Light key */
+  --key-bg-light: hsl(30, 25%, 89%); /* Key background */
+  --key-shadow-light: hsl(28, 16%, 65%); /* Key shadow */
 
   /* Text */
+  --text-dark-grayish-blue: hsl(221, 14%, 31%);
+  --text-white: hsl(0, 0%, 100%);
 
-  --Very-dark-grayish-blue: hsl(221, 14%, 31%);
-  --White: hsl(0, 0%, 100%);
+  /* Theme 2 */
+
+  /* Backgrounds */
+  --bg-main: hsl(0, 0%, 90%); /* Main background */
+  --bg-toggle-keypad: hsl(0, 5%, 81%); /* Toggle & keypad background */
+  --bg-screen: hsl(0, 0%, 93%); /* Screen background */
+
+  /* Keys */
+  /* Cyan key */
+  --key-bg-cyan: hsl(185, 42%, 37%); /* Key background */
+  --key-shadow-cyan: hsl(185, 58%, 25%); /* Key shadow */
+
+  /* Orange key */
+  --key-bg-orange: hsl(25, 98%, 40%); /* Key background (toggle) */
+  --key-shadow-orange: hsl(25, 99%, 27%); /* Key shadow */
+
+  /* Light yellow key */
+  --key-bg-yellow: hsl(45, 7%, 89%); /* Key background */
+  --key-shadow-yellow: hsl(35, 11%, 61%); /* Key shadow */
+
+  /* Text */
+  --text-dark-grayish-yellow: hsl(60, 10%, 19%);
+  --text-white: hsl(0, 0%, 100%);
+
+  /* Theme 3 */
+
+  /* Backgrounds */
+  --bg-main3: hsl(268, 75%, 9%); /* Main background */
+  --bg-toggle-keypad-screen: hsl(
+    268,
+    71%,
+    12%
+  ); /* Toggle, keypad, screen background */
+
+  /* Keys */
+  /* Violet key */
+  --key-bg-violet: hsl(281, 89%, 26%); /* Key background */
+  --key-shadow-magenta: hsl(285, 91%, 52%); /* Key shadow */
+
+  /* Cyan toggle key */
+  --key-bg-cyan: hsl(176, 100%, 44%); /* Key background (toggle) */
+  --key-shadow-cyan: hsl(177, 92%, 70%); /* Key shadow */
+
+  /* Dark violet key */
+  --key-bg-dark-violet: hsl(268, 47%, 21%); /* Key background */
+  --key-shadow-magenta-dark: hsl(290, 70%, 36%); /* Key shadow */
+
+  /* Text */
+  --text-light-yellow: hsl(52, 100%, 62%);
+  --text-very-dark-blue: hsl(198, 20%, 13%);
+  --text-white: hsl(0, 0%, 100%);
 }

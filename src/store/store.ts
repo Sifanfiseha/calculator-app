@@ -43,7 +43,12 @@ const useCalculatorStore = create<CalculatorState>((set) => ({
     set((state) => {
       try {
         const fullExpression = state.input;
-        const result = eval(fullExpression);
+        let result;
+        if (state.input.trim() !== "") {
+          result = eval(fullExpression);
+        } else {
+          result = "0";
+        }
         return {
           input: String(result),
           result: String(result),
