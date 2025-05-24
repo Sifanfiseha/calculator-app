@@ -4,7 +4,6 @@ import { create } from "zustand";
 const useCalculatorStore = create<CalculatorState>((set) => ({
   input: "",
   error: "",
-  overwrite: false,
   result: "",
   addDigit: (digit) => {
     set((state) => ({
@@ -31,7 +30,6 @@ const useCalculatorStore = create<CalculatorState>((set) => ({
     set({
       input: "",
       error: "",
-      overwrite: false,
       result: "",
     });
   },
@@ -49,8 +47,6 @@ const useCalculatorStore = create<CalculatorState>((set) => ({
         return {
           input: String(result),
           result: String(result),
-
-          overwrite: true,
           error: "",
         };
       } catch {

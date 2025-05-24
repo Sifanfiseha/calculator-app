@@ -2,7 +2,7 @@ import Calculator from "./components/Calculator";
 
 function App() {
   return (
-    <main className="flex bg-yellow-200 items-center justify-center w-full h-screen">
+    <main className="flex bg-Desaturated-dark-blue items-center justify-center w-full h-screen">
       <Calculator />
     </main>
   );

@@ -2,7 +2,7 @@ interface CalculatorState {
   input: string;
 
   result: string;
-  overwrite: boolean;
+
   error: string | null;
   addDigit: (digit: string) => void;
   addOprator: (oprator: string) => void;

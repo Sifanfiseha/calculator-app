@@ -5,7 +5,7 @@ import { CalcNum, Lastrow, RightCol } from "../utils/data";
 const ButtonGrid = () => {
   const {} = useCalculatorStore();
   return (
-    <div className="bg-white flex flex-col gap-4 p-6 rounded-xl">
+    <div className="bg-Very-dark-desaturated-blue/80 flex flex-col gap-4 p-6 rounded-xl">
       <div className="grid grid-cols-[1fr_auto] gap-4">
         <div className="flex gap-4 flex-col">
           {CalcNum.map((row, i) => (

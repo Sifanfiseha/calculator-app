@@ -4,3 +4,73 @@
 body {
   font-family: "League Spartan", sans-serif;
 }
+
+@theme {
+  /* Theme 1 */
+
+  /* Backgrounds */
+
+  /* (main background) */
+  --color-Very-dark-desaturated-blue: hsl(222, 26%, 31%);
+  /* (toggle background, keypad background) */
+  --color-Very-dark-desaturated-blue: hsl(223, 31%, 20%);
+  /* (screen background) */
+  --color-Very-dark-desaturated-blue: hsl(224, 36%, 15%);
+
+  /* Keys */
+
+  /* (key background) */
+  --color-Desaturated-dark-blue-key: hsl(225, 21%, 49%);
+  /* (key shadow) */
+  --color-Desaturated-dark-blue: hsl(224, 28%, 35%);
+
+  /* (key background, toggle) */
+  --color-Red: hsl(6, 63%, 50%);
+  /* (key shadow) */
+  --color-Dark-red: hsl(6, 70%, 34%);
+  /* (key background) */
+
+  --color-Light-grayish-orange: hsl(30, 25%, 89%);
+  /* (key shadow) */
+  --color-Grayish-orange: hsl(28, 16%, 65%);
+
+  /* Text */
+
+  --color-Very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --color-White: hsl(0, 0%, 100%);
+}
+
+:root {
+  /* Theme 1 */
+
+  /* Backgrounds */
+
+  /* (main background) */
+  --Very-dark-desaturated-blue: hsl(222, 26%, 31%);
+  /* (toggle background, keypad background) */
+  --Very-dark-desaturated-blue: hsl(223, 31%, 20%);
+  /* (screen background) */
+  --Very-dark-desaturated-blue: hsl(224, 36%, 15%);
+
+  /* Keys */
+
+  /* (key background) */
+  ---dark-blue-key: hsl(225, 21%, 49%);
+  /* (key shadow) */
+  --Desaturated-dark-blue: hsl(224, 28%, 35%);
+
+  /* (key background, toggle) */
+  --Red: hsl(6, 63%, 50%);
+  /* (key shadow) */
+  --Dark-red: hsl(6, 70%, 34%);
+  /* (key background) */
+
+  --Light-grayish-orange: hsl(30, 25%, 89%);
+  /* (key shadow) */
+  --Grayish-orange: hsl(28, 16%, 65%);
+
+  /* Text */
+
+  --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --White: hsl(0, 0%, 100%);
+}
