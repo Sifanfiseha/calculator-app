@@ -11,26 +11,27 @@ const ButtonGrid = () => {
           {CalcNum.map((row, i) => (
             <div className="flex gap-4 items-center justify-between" key={i}>
               {row.map((value, i) => (
-                <Button key={i} value={value} />
+                <Button type="deg" key={i} value={value} />
               ))}
             </div>
           ))}
           <div className="flex gap-4 items-center justify-between">
             {Lastrow.map((value, i) => (
-              <Button key={i} value={value} />
+              <Button type="deg" key={i} value={value} />
             ))}
+            <Button type="opr" value="/" />
           </div>
         </div>
         <div className="flex flex-col gap-4">
-          <Button value="del" />
+          <Button type="del" value="del" />
           {RightCol.map((value, i) => (
-            <Button key={i} value={value} />
+            <Button type="opr" key={i} value={value} />
           ))}
         </div>
       </div>
       <div className="flex gap-4">
-        <Button value="RESET" />
-        <Button value="=" />
+        <Button type="reset" value="RESET" />
+        <Button type="=" value="=" />
       </div>
     </div>
   );

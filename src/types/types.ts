@@ -1,11 +1,11 @@
 interface CalculatorState {
   input: string;
-  currentValue: string;
+
   result: string;
   overwrite: boolean;
   error: string | null;
   addDigit: (digit: string) => void;
-  addOprator: (oprator: "+" | "-" | "*" | "/") => void;
+  addOprator: (oprator: string) => void;
   clear: () => void;
   deleteLast: () => void;
   evaluate: () => void;
@@ -15,6 +15,7 @@ interface CalculatorState {
 
 interface ButtonProps {
   value: string;
+  type: string;
 }
 
 export type { CalculatorState, ButtonProps };

@@ -2,34 +2,33 @@ import type { CalculatorState } from "../types/types";
 import { create } from "zustand";
 
 const useCalculatorStore = create<CalculatorState>((set) => ({
-  currentValue: "",
-  input: "21,131",
+  input: "",
   error: "",
   overwrite: false,
   result: "",
   addDigit: (digit) => {
     set((state) => ({
-      currentValue: state.overwrite ? digit : state.currentValue + digit,
-      input: state.overwrite ? digit : state.currentValue + digit,
+      input: state.input + digit,
       overwrite: false,
+      result: "",
     }));
   },
   addOprator: (oprator) => {
     set((state) => {
-      const lastChar = state.currentValue.slice(-1);
+      const lastChar = state.input.slice(-1);
       const isOprator = ["+", "-", "*", "/"].includes(lastChar);
-      if (state.currentValue === "" || isOprator) {
+
+      if (state.input === "" || isOprator) {
         return state;
       }
       return {
-        input: state.input + state.currentValue + oprator,
+        input: state.input + oprator,
         currentValue: "",
       };
     });
   },
   clear: () => {
     set({
-      currentValue: "",
       input: "",
       error: "",
       overwrite: false,
@@ -37,19 +36,20 @@ const useCalculatorStore = create<CalculatorState>((set) => ({
     });
   },
   deleteLast: () => {
+    console.log("jo");
     set((state) => ({
-      currentValue: state.currentValue.slice(0, -1),
+      input: state.input.slice(0, -1),
     }));
   },
   evaluate: () => {
     set((state) => {
       try {
-        const fullExpression = state.input + state.currentValue;
+        const fullExpression = state.input;
         const result = eval(fullExpression);
         return {
-          input: "",
+          input: String(result),
           result: String(result),
-          currentValue: String(result),
+
           overwrite: true,
           error: "",
         };

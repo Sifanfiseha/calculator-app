@@ -4,7 +4,7 @@ const CalcNum: string[][] = [
   ["3", "2", "1"],
 ];
 
-const Lastrow: string[] = [".", "0", "/"];
+const Lastrow: string[] = [".", "0"];
 
 const RightCol: string[] = ["+", "*", "-"];
 
