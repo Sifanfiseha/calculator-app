@@ -25,7 +25,7 @@ const useCalculatorStore = create<CalculatorState>((set) => ({
       const lastTwoChar = state.input.slice(-2);
       const isOprator = ["+", "-", "*", "/"].includes(lastChar);
 
-      if (oprator === "-" && lastTwoChar !== "-") {
+      if (oprator === "-" && lastTwoChar !== "--") {
         return { input: state.input + "-" };
       }
 
